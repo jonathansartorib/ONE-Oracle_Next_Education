@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+	function pulaLinha() {
+	
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+
+	function mostra(frase) {
+	
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	function calculaImc(altura, peso) {
+	
+		return peso / (altura * altura);
+		
+	}
+	
+	var alturaInformada = prompt("Informe sua Altura");
+	var pesoInformado = prompt("Informe seu Peso");
+	
+	var imc = calculaImc(alturaInformada, pesoInformado);
+	var imcArredondado = Math.round(imc);
+	
+	document.write("O IMC  calculado é " + imc);
+	pulaLinha();
+	document.write("O IMC Arredondado calculado é " + imcArredondado);
+	
+	
+
+</script>

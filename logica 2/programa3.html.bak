@@ -1,0 +1,62 @@
+
+<canvas width="600" height="400">
+
+</canvas>
+
+
+<script>
+
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext('2d');
+	
+	pincel.fillStyle = 'grey';
+	pincel.fillRect(0, 0, 600, 400);
+	
+	
+	//essa funcao vai criar circulos onde clicar e mostrar coordenadas no log
+	function desenhaCirculo(evento) {
+	
+		var x = evento.pageX - tela.offsetLeft;
+		var y = evento.pageY - tela.offsetTop;
+			
+		pincel.fillStyle = "blue";
+		pincel.beginPath();
+		pincel.arc(x, y, 10, 0, 2 * 3.14);
+		pincel.fill();
+		console.log(x + "," + y);
+	
+	}
+	
+	tela.onclick = desenhaCirculo;
+	
+	
+	/*
+	
+	dessa forma que eu descobri como pegar do navegador o evento da posicao do mouse
+	
+	function exibeAlerta(evento) {
+	
+		alert("Cliquei");
+		console.log(evento);
+	
+	}
+	
+	dessaforma mostra no alert a posicao do mouse dentro do canvas
+	function exibeAlerta(evento) {
+	
+		// - tela.offset para remover as bordas do navegador ate o canvas
+		// evento.pageX ou Y passa o evento click da tela toda nao apenas do canvas
+		
+		var x = evento.pageX - tela.offsetLeft;
+		var y = evento.pageY - tela.offsetTop;
+		
+		alert(x + "," + y);
+	
+	}
+	
+	
+	*/
+</script>
+
+
+

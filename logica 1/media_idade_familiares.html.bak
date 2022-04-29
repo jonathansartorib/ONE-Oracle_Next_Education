@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+	function pulaLinha() {
+	
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+	
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	for(var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+	//O for tem 3 espaços
+	
+		mostra(7 * multiplicador);
+		multiplicador = multiplicador + 1;
+		
+	}
+	
+	mostra("FIM");
+
+</script>	
