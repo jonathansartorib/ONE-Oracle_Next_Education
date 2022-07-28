@@ -1,2 +1,5 @@
-# ONE-Oracle_Next_Education
-Repositório para consulta das aulas do curso
+# ONE - Oracle Next Education - 2ª turma
+
+## Aqui trago alguns mini projetos de aulas para consulta
+
+### Aulas realizadas na  plataforma Alura
