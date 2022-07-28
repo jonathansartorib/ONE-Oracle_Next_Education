@@ -1,0 +1,65 @@
+
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+	
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	mostra("Flavio tem " + (2022 - 1977) + " anos");
+
+	pulaLinha();
+	
+	document.write("A idade do Flavio é <br> 18");
+	document.write("<br>");
+	
+	document.write("Flavio tem " + (2017 - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem " + (2017 - 1966) + " anos");
+	
+	document.write("<br>");
+	document.write("<br>");
+	
+	var ano = 2016;
+	
+	document.write("Flavio tem " + (ano - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem " + (ano - 1966) + " anos");
+	
+	document.write("<br>");
+	document.write("<br>");
+	
+	ano = 2022;
+	
+	document.write("Flavio tem " + (ano - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem " + (ano - 1966) + " anos");
+	
+	var puloLinha = "<br><br><br>";
+	
+	document.write(puloLinha);
+	
+	var media = (39 + 20 + 41)/3;
+	
+	document.write("A media das idades é " + media);
+	document.write("<br>");
+	document.write("A media das idades é " + Math.round(media));//Math.round() para arredondar
+	
+	document.write(puloLinha);
+
+	var idadeFlavio = 39;
+	var idadeJoaquim = 20;
+	media = (idadeFlavio + idadeJoaquim)/2;
+	
+	document.write("A media das idades é " + Math.round(media));//Math.round() para arredondar
+	
+	pulaLinha();
+	
+</script>

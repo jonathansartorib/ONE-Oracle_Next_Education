@@ -1,0 +1,86 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+	function pulaLinha() {
+	
+		document.write("<br>");
+		document.write("<br>");
+	}
+	
+	function mostra(frase) {
+	
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	
+	var pesoFlavio = 73;
+	var alturaFlavio = 1.71;
+	var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
+	mostra("O imc do Flavio é " + imcFlavio);
+	
+	
+	var pesoAmigo = 68;
+	var alturaAmigo = 1.72;
+	var imcAmigo = pesoAmigo / (alturaAmigo * alturaAmigo);
+	mostra("O imc do amigo é " + imcAmigo);
+	
+	var pesoTia = 50;
+	var alturaTia = 1.62;
+	
+	//as variaveis imc se repetem entao cria-se uma funcao para nao precisar ficar repetindo
+	
+	function calculaImc(peso, altura) {
+	
+		var imc = peso / (altura * altura);
+		mostra("O valor imc é " + imc);
+		pulaLinha();
+	}
+	
+	//var pesoFlavio = 73;
+	//var alturaFlavio = 1.71;
+	calculaImc(73, 1.71);
+	
+	//var pesoAmigo = 68;
+	//var alturaAmigo = 1.72;
+	calculaImc(68, 1.72);
+	
+	//var pesoTia = 50;
+	//var alturaTia = 1.62;
+	calculaImc(50, 1.62);
+	
+	
+	function calculaImcSomado(altura1, peso1, altura2, peso2) {
+	
+		var imc1 = peso1 / (altura1 * altura1);
+		var imc2 = peso2 / (altura2 * altura2);
+		var imcTotal = imc1 + imc2;
+		mostra("A soma dos Imc's é " + imcTotal);
+	}
+
+	calculaImcSomado(1.71, 73, 1.72, 68);
+	
+	
+	//criar uma funcao mais generica para o IMC
+	
+	function calculaImcGenerica(altura, peso) {
+	
+		var imc = peso / (altura * altura);
+		return imc;//guarda o resultado da funcao acima para atribuir para as variaveis abaixo
+		//pode ser igual abaixo que sera o mesmo resultado
+		// return peso / (altura * altura);
+	
+	}
+	
+	var imcFlavioo = calculaImcGenerica(1.71, 73);
+	var imcAmigoo = calculaImcGenerica(1.72, 68);
+	var totalImc = imcFlavioo + imcAmigoo;
+	document.write("A soma dos Imcsss é " + totalImc);
+	
+	mostra(imcFlavioo);
+	mostra(imcAmigoo);
+	
+	
+</script>
